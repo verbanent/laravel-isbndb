@@ -1,0 +1,42 @@
+{
+    "name": "verbanent/laravel-isbndb",
+    "description": "Laravel integration for isbndb-client (service provider, config, facades).",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/contracts": "^11.0|^12.0",
+        "verbanent/isbndb-client": "^0.0.1",
+        "symfony/http-client": "^7.0",
+        "nyholm/psr7": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Verbanent\\Isbndb\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Verbanent\\Isbndb\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Radek Ziemniewicz",
+            "email": "radek@quillstack.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Verbanent\\Isbndb\\Laravel\\IsbndbServiceProvider"
+            ],
+            "aliases": {
+                "Isbndb": "Verbanent\\Isbndb\\Laravel\\Facades\\Isbndb"
+            }
+        }
+    }
+}
